@@ -44,4 +44,159 @@ let miArray3 = [1, "dos", true, {nombre: "Juan", edad:30}];
 console.log(miArray4);
 ```
 
-5. 
+## Accediendo a la información de un array 
+
+### Propiedad length
+- Devuelve la cantidad de elementos del array
+
+### Operador [pos]
+- Permite acceder para leer o modificar el elemento post del array
+
+### metodo at(pos)
+- Devuelve el elemento dela posicion pos. El parametro admite valores negativos, lo que significa que empieza a contar por el final del array. 
+
+```Javascript
+const letters = ["A", "B", "C"];
+console.log(letters.length):
+console.log(letters(2));
+console.log(letters(5));
+```
+
+## añadir o eliminar elementos 
+- push(ele1, ele2): añade uno o varios elementos la final del array. Devuelve el tamaño del array.
+
+```Javascript
+let miArray = [1, 2, 3];
+miArray.push(4);
+console.log(miArray); 
+```
+
+- pop(): Devuelve el ultimo elemento del array y lo elimina 
+
+```Javascript
+let miArray = [1, 2, 3];
+miArray.pop();
+console.log(miArray); 
+```
+
+- unshift(ele 1, ele2): añade uno o varios elementos al inicio devolviendo el tamaño del array despues de añadidos
+
+```Javascript
+let miArray = [1, 2, 3];
+miArray.unshift(0);
+console.log(miArray); 
+```
+
+- shift(): devuelve el elemento del array y lo elimina 
+
+```Javascript
+let miArray = [1, 2, 3];
+miArray.shift();
+console.log(miArray); 
+```
+
+
+- concat(ele1, ele2): concatena dos arrays
+
+```Javascript
+let miArray = [1, 2, 3];
+let miOtroArray = [4, 5];
+let nuevoArray = miArray.concat(miOtroArray);
+console.log(miArray);
+console.log(miOtroArray); 
+console.log(minuevoArray); 
+```
+
+- split(separador): a partir de una cadena, crear un array dividiendo dicha cadena en elementos delimitados por separador 
+
+```Javascript
+let miString ="hola, ¿como estas?";
+let miArray = miString.split(" ");
+console.log(miArray);
+```
+
+- join(separador): a partir de un array, crea una cadena separando cada elemento con el separador.
+```Javascript
+let miArray =["hola,", "¿como", "estas?"];
+let miString = miArray.join(" ");
+console.log(miString);
+```
+
+
+## Busqueda de elementos en un array
+- includes(elemento): devuelve true o false si el elemento existe o no dentro del array 
+- indexOf(elemento): devuelve la posición de la primera aparición del elemento. Si no existe, devuelve -1.
+- lastIndexOf(elemento): devuelve la posición de la ultima aparición del elemento. Si no existe, devuelve -1.
+
+## Modificar el array o crear fragmentos 
+- slice(inicio, fin): devuelve un array con los elementos desde la posición inicio hasta la posición fin, ambos excluidos.
+
+## Ordenar elementos de un array 
+- Reverse(): invierte el orden de los elementos de un array
+- sort(): ordena el array alfabeticamente
+- sort(criterio): ordena el array con el criterio determinado por la funcion criterio.
+
+## Borrar elementos de un array 
+- Se puede borrar el contenido de un elemento de un array poniendo su valor a null o asignando una cadena vacia " ".
+- Para eliminar completamente un elemento del array se utiliza el operador delete.
+
+## recorrido de un array 
+1. recorrer con un bucle clasico pasando por todos los elementos.
+```Javascript
+var dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domigo"];
+for(i=0;i<dias.lengt;i++)
+{
+    console.log(dias[i]);
+}
+```
+
+2. Recorrer con un while, pasando por todos los elementos.
+```Javascript
+var dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domigo"];
+var i = 0;
+whiel(i<dias.lengt)
+{
+    console.log(dias[i]);
+    i++;
+}
+```
+
+3. usando la setencia for,,,,in.
+
+```Javascript
+var dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domigo"];
+for(let index in dias)
+{
+    console.log(dias[index]);
+}
+```
+
+## Array multidimensionales
+
+```Javascript
+const matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+];
+```
+
+- Recorrer una matriz utilizando bucles andiados
+```Javascript
+var dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domigo"];
+for(let i=0;i<matriz,length;i++)
+{
+    for(let j=0;matriz(i),length; j++)
+    {
+        console.log(matriz[i][j]);
+    }
+}
+```
+
+# Ejercicios
+
+1. Dada una lista de números separados por coma, calcular la suma, el mayor, el menor y la media de todos.
+
+2. Introducir dos cadenas con elementos separados por coma, y con un boton concatenar las dos cadenas y mostrarlas en pantalla. 
+
+3. 
